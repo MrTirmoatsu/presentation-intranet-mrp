@@ -12,6 +12,18 @@ body {
   padding: 2rem 1rem;
 }
 
+/* === QR SECTION === */
+.qr-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.qr-section img {
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
 /* === SLIDES === */
 .slide {
   max-width: 900px;
