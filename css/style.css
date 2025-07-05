@@ -1,0 +1,108 @@
+/* === BASE === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* === SLIDES === */
+.slide {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  background: #1e293b;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide h1, .slide h2 {
+  margin-top: 0;
+  color: #38bdf8;
+}
+
+.slide h3 {
+  color: #7dd3fc;
+  margin-top: 1.5rem;
+}
+
+.slide p, .slide ul, .slide li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.slide ul {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+/* === NAVIGATION === */
+.nav-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-buttons button {
+  background-color: #2563eb;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: #1e40af;
+}
+
+/* === BARRE DE PROGRESSION === */
+.progress-container {
+  width: 100%;
+  max-width: 900px;
+  height: 8px;
+  background: #334155;
+  border-radius: 10px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* === ANIMATION === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 600px) {
+  .slide {
+    padding: 1.5rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+  }
+}
